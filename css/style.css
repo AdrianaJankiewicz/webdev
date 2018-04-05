@@ -1,0 +1,402 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Pretty fonts */
+@font-face {
+	font-family: CinzelDecorative;
+	src: url(../fonts/CinzelDecorative-Regular.woff);
+}
+
+@font-face {
+	font-family: Cinzel;
+	src: url(../fonts/Cinzel-Regular.woff);
+}
+
+@font-face {
+	font-family: Antipasto;
+	src: url(../fonts/AntipastoPro-Thin_trial.woff);
+}
+		/* --------------------------- CONTAINERS --------------------------- */
+.container {
+	width: 85%;
+	height: 700px;
+	margin: auto;
+}
+.container_fixed {
+	width: 1600px;
+	height: 700px;
+	margin: auto;
+}
+
+.container_photography {
+	width: 85%;
+	height: 1300px;
+	margin: auto;
+}
+
+		/* --------------------------- HEADER--------------------------- */
+header {
+	position: -webkit-sticky; /* I don't think sticky will work in Safari, unless I put this in so... */
+    position: sticky;
+	background-color: white;
+	top: 0;
+	z-index: 1; /* z-index of 1 should be enough to keep the header in front of other elements? */
+	border-bottom: 1px solid rgba(39,56,91,1);
+}
+
+.logo {
+	text-align: left;
+	padding-top: 20px;
+	padding-left: 10px;
+	display: inline-block;
+	font-family: CinzelDecorative;
+	font-weight: bold;
+	font-size: 40px;
+}
+
+.logo a {
+	text-decoration: none;
+	color: black;
+}
+
+		/* --------------------------- NAV --------------------------- */
+
+nav { 
+	height: 80px;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	float: right;
+	
+}
+
+li {
+	list-style-type: none;
+	display: inline-block;
+	font-size: 15px;
+	font-weight: bold;
+	padding-top: 30px;
+	line-height: 40px;
+}
+
+li a {
+	display: block;
+	color: black;
+	width: 150px;
+	text-decoration: none;
+	text-align: center;
+}
+
+li a:hover {
+	background-color: rgba(39,56,91,0.9);
+	color: white;
+	-webkit-transition-duration: 0.20s; /* Safari */
+    transition-duration: 0.20s;
+}
+
+		/* --------------------------- HOMEPAGE --------------------------- */
+
+#homepage {
+	width: 100%;
+	height: 860px;
+	margin: auto;
+	position: relative;
+	background-image: url(../images/DSC_0148.png);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+span {
+	font-family: Cinzel;
+	font-size: 45px;
+}
+
+.overlay_text { 
+	width: 100%;
+	font-size: 20px;
+	font-family: Antipasto;
+	position: absolute;
+	bottom: 400px;
+	color: white;
+	text-align: center;
+}
+
+#home_button {
+	font-size: 30px;
+	border: 1px solid white;
+	font-family: Cinzel;
+	color: white;
+	background-color: rgba(255,248,248,0.0);
+	padding: 10px;
+}
+
+#home_button:hover, .portfolio_button:hover, #submit_button:hover { 
+	-webkit-transition-duration: 0.50s; /* Safari again */
+    transition-duration: 0.50s;
+	background-color: rgba(39,56,91,0.9);
+	border: 1px solid rgba(39,56,91,0.9);
+}
+
+		/* --------------------------- PORTFOLIO --------------------------- */
+
+#portfolio {
+	columns: 3;
+	position: relative;
+	height: 800px;
+	background-image: url(../images/DSC_0006.png), url(../images/DSC_0140.png), url(../images/DSC_0376.png);
+	background-position: left, center, right;
+	background-size: 33%;
+	background-repeat: no-repeat;
+}
+
+
+.overlay_design { 
+	width: 33%; 
+	font-size: 20px;
+	font-family: Antipasto;
+	position: absolute;
+	bottom: 400px; 
+	left: 0px;
+	color: white; 
+	text-align: center;
+}
+
+
+.overlay_media { 
+	font-size: 20px;
+	font-family: Antipasto;
+	position: absolute;
+	bottom: 400px;
+	left: 43%;
+	color: white;
+	text-align: center;
+}
+
+
+.overlay_photography { 
+	width: 533px;
+	font-size: 20px;
+	font-family: Antipasto;
+	position: absolute;
+	bottom: 400px;
+	right: 0%;
+	color: white;
+	text-align: center;
+}
+
+.portfolio_button {
+	font-size: 20px;
+	border: 1px solid white;
+	font-family: Cinzel;
+	color: white;
+	background-color: rgba(255,248,248,0.0);
+	padding: 10px;
+}
+
+.portfolio_text {
+	font-size: 210%;
+}
+
+		/* --------------------------- PHOTOGRAPHY --------------------------- */
+
+.column {
+	float: left;
+	margin: 1px;
+}
+
+
+.content {
+	position: relative;
+}
+
+.photos {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.content:hover .overlay_text_photo {
+  opacity: 1;
+}
+.overlay_text_photo {
+	position: absolute;
+	top: 0;
+  	bottom: 0;
+  	left: 0;
+  	right: 0;
+  	height: 100%;
+  	width: 100%;
+  	opacity: 0;
+  	transition: .5s ease;
+	background-image: linear-gradient(to top, rgba(39,56,91,1.0),rgba(39,56,91,0.8), rgba(255,248,248,0.0));
+}
+
+.title, .text {
+	color: white;
+}
+
+.title {
+	text-align: center;
+	font-family: Cinzel;
+	font-size: 300%;
+}
+
+.text {
+	font-size: 110%;
+	margin: 30px;
+}
+
+		/* --------------------------- MEDIA --------------------------- */
+.media {
+	height: 700px;
+}
+
+.web_title {
+	font-family: CinzelDecorative;
+	font-size: 300%;
+	text-align: center;
+}
+
+iframe {
+	border: none;
+	width: 530px;
+	height: 360px;
+}
+
+		/* --------------------------- ABOUT ME --------------------------- */
+
+#about {
+	column-count: 2;
+	background-color: rgba(104,130,170,0.3)
+}
+
+#about_image {
+	width: 80%;
+	height: auto;
+}
+
+#about_h1 {
+	font-family: Cinzel;
+	text-align: center;
+	font-size: 300%;
+	padding-top: 250px;
+
+}
+
+#about_p {
+	font-size: 120%;
+	padding-right: 10%;
+}
+
+/*HOW do I style this thing? */
+progress {
+	width: 65%;
+	display: inline-block;
+}
+
+
+.progression {
+	display: inline-block;
+	font-family: Cinzel;
+	font-size: 120%;
+}
+
+
+		/* --------------------------- CONTACT --------------------------- */
+
+#contact {
+	width: 1600px;
+	height: 900px;
+	background-image: url(../images/DSC_0248.png);
+	background-repeat: no-repeat;
+}
+
+#name_surname, #email_message, #submit, #touch {
+	position: relative;
+	box-shadow: 1px 1px 10px black;
+	border-radius: 10px;
+	background-color: rgba(104,130,170,0.8);
+	text-align: center;
+	font-size: 25px;
+}
+
+#touch {
+	font-family: CinzelDecorative;
+	color: white;
+	top: 120px;
+	left: 1100px;
+	width: 400px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+#name_surname {
+	top: 100px;
+	left: 950px;
+	width: 400px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+#email_message {
+	top: 80px;
+	left: 1000px;
+	width: 500px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+#submit {
+	top: 70px;
+	left: 950px;
+	width: 200px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+label {
+	font-family: Cinzel;
+	color: white;
+}
+
+#submit_button {
+	font-size: 20px;
+	border: 1px solid white;
+	font-family: Cinzel;
+	color: white;
+	background-color: rgba(255,248,248,0.0);
+	padding: 10px;
+}
+
+.contact_form {
+	border: none;
+	border-bottom: 1px solid black;
+	background-color: rgba(189,196,216,1.0);
+	height: 18px;
+	width: 200px;
+}
+
+.contact_textarea {
+	border: none;
+	border-bottom: 1px solid black;
+	background-color: rgba(189,196,216,1.0);
+	height: 50px;
+	width: 200px;
+}
+
+		/* --------------------------- FOOTER --------------------------- */
+
+footer {
+	width: 100%;
+	height: 80px;
+	background-color: white;
+	text-align: center;
+	border-top: 1px solid rgba(39,56,91,1);
+	clear: both;
+}
+
+.socialmedia {
+	border-radius: 50px;
+	margin: auto;
+}
